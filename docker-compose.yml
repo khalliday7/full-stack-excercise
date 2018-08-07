@@ -1,0 +1,22 @@
+version: "3"
+services:
+  backend:
+    build: ./backend
+    links:
+      - db
+    environment:
+      - MYSQL_PORT=$MYSQL_PORT
+      - IS_COMPOSED=1
+    ports:
+      - "5000:5000"
+    command: ["./scripts/wait-for-mysql.sh", "db", "--", "python", "./src/run.py"]
+  db:
+    restart: always
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+      MYSQL_RANDOM_ROOT_PASSWORD: $MYSQL_RANDOM_ROOT_PASSWORD
+    ports:
+      - "$MYSQL_PORT:3306"
