@@ -43,6 +43,7 @@ def query_result_to_json(query_result):
     ''' Translate table queury object to JSON serializable dictionary '''
     return [
         {
+            'id': r.id,
             'user_name': r.user_name,
             'score': r.score,
             'date': str(r.date)

@@ -1,8 +1,8 @@
 ''' Python script for testing FullStackTutorial backend '''
 
+import json
 import unittest
 import requests
-import json
 
 # consider setting urls in a config file
 SERVER_URL = 'http://localhost:5000'
@@ -18,7 +18,13 @@ HEADERS = {
 }
 
 class LiveBackendTests(unittest.TestCase):
+    ''' Define tests for live backend. Tests include clearing the high scores
+        table, posting new entries, and retrieving entries from the table.
+    '''
+
     def test_live_backend(self):
+        ''' Run live backend tests '''
+
         # clear high scores table
         print("Cleaing high scores table...")
         r = requests.post(CLEAR_HIGH_SCORES_URL)

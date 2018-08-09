@@ -13,6 +13,7 @@ cryptography==2.3
 curtsies==0.3.0
 docutils==0.14
 Flask==1.0.2
+Flask-Cors==3.0.6
 Flask-RESTful==0.3.6
 Flask-SQLAlchemy==2.3.2
 future==0.16.0
