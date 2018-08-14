@@ -26,3 +26,32 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.grid {
+  margin: auto;
+  display: grid;
+  /*width: 50%;
+  height: 100%;*/
+  grid-template-columns: auto auto auto auto;
+  background-color: #2196F3;
+}
+
+.box {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5%;
+  text-align: center;
+}
+
+.box > button {
+  width: 150px;
+  height: 100px;
+  font-size: large;
+}
+
+.box > .covered {
+  background-color: #222;
+}
+
+.box > .uncovered {
+  background-color: white;
+}
