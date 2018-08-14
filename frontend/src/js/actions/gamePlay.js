@@ -1,2 +1,24 @@
-export const SELECT_BOX = "SELECT_BOX"
-export const NEW_GAME = "NEW_GAME"
+import { INIT_GAME, SELECT_BOX, UNPAUSE } from './types'
+
+export const selectBox = (index) => dispatch => {
+  dispatch({
+    type: SELECT_BOX,
+    payload: {
+      index: index
+    }
+  })
+}
+
+export const unpause = () => dispatch => {
+  dispatch({
+    type: UNPAUSE,
+    payload: {}
+  })
+}
+
+export const initGame = () => dispatch => {
+  dispatch({
+    type: INIT_GAME,
+    payload: {}
+  })
+}

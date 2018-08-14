@@ -27,8 +27,10 @@ class HighScores extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  highScores: state.highScores.items
-})
+const mapStateToProps = state => {
+  return {
+    highScores: state.highScores.items
+  }
+}
 
 export default connect(mapStateToProps, { getHighScores })(HighScores)
