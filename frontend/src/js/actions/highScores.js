@@ -1,4 +1,4 @@
-import { GET_HIGH_SCORES, NEW_HIGH_SCORE } from './types'
+import { GET_HIGH_SCORES } from './types'
 
 export const getHighScores = () => dispatch => {
   fetch('http://localhost:5000/getHighScores')
