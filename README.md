@@ -1,1 +1,1 @@
-Simple, not very elegant full stack excercise.
+Simple, not very elegant, full stack excercise.
